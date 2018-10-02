@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Character : MonoBehaviour {
 
+    /*
+     * Variables used for the character controllers, some things may be changed when converting to rigidbodies
+     * P1 starts out being able to move (bool isP1 = true), the teammate at default, P2, is unable to move (bool canMove = true). 
+    */
     public CharacterController _controller;
     public bool canMove = true;
     public float speed = 10;
@@ -13,6 +17,11 @@ public class Character : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        /* gets controller
+         * if the tag is equal to P1, P1 can move, but P2 cannot
+         * Otherwise, P2 can move, but P2 cannot
+         * teammate grabs the character object that cannot move
+        */ 
         _controller = GetComponent<CharacterController>();
         if (this.tag == "P1")
         {
@@ -32,6 +41,13 @@ public class Character : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        /*
+         * if canMove is true for any player, that player is allowed to move vertically and horizontally
+         * if P1 has the ability to move, and the "1" key is pressed, P1's canMove attribute is set to false,
+         * while P2's canMove attribute is set to true
+         * if P2 has the ability to move, and the "2" key is pressed, P2's canMove attribute is set to false,
+         * while P1's canMove attribute is set to true
+        */
         if (canMove)
         {
             if (isP1)
