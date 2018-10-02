@@ -14,6 +14,8 @@ public class Character : MonoBehaviour {
     public bool isP1 = true;
     private Vector3 move;
     public Character teammate;
+    public int keys = 0;
+    public Sound noise;
 
 	// Use this for initialization
 	void Start () {
@@ -36,7 +38,7 @@ public class Character : MonoBehaviour {
             teammate = GameObject.FindGameObjectWithTag("P1").GetComponent<Character>();
         }
 
-
+        noise = this.GetComponent<Sound>();
 	}
 	
 	// Update is called once per frame
@@ -59,6 +61,7 @@ public class Character : MonoBehaviour {
                 move = new Vector3(Input.GetAxis("P2Horizontal"), 0, Input.GetAxis("P2Vertical"));
             }
             _controller.Move(move * Time.deltaTime * speed); //maybe for running and tiptoeing
+
         }
 
         if (isP1 && Input.GetKey(KeyCode.Alpha1))

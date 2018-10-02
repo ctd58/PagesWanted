@@ -447,6 +447,7 @@ GameObject:
   - component: {fileID: 824814937}
   - component: {fileID: 824814936}
   - component: {fileID: 824814935}
+  - component: {fileID: 824814941}
   m_Layer: 0
   m_Name: P2
   m_TagString: P2
@@ -555,6 +556,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &824814941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 824814934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92db5aa0d7f285e4d8d5fdf15ea756bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: 0
 --- !u!1 &986304946
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,6 +668,7 @@ GameObject:
   - component: {fileID: 1766075697}
   - component: {fileID: 1766075701}
   - component: {fileID: 1766075702}
+  - component: {fileID: 1766075703}
   m_Layer: 0
   m_Name: P1
   m_TagString: P1
@@ -764,3 +778,15 @@ MonoBehaviour:
   speed: 10
   isP1: 1
   teammate: {fileID: 0}
+--- !u!114 &1766075703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1766075696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92db5aa0d7f285e4d8d5fdf15ea756bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: 0
